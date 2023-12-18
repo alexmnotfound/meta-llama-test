@@ -1,0 +1,6 @@
+vendor
+vendor/*
+dist
+dist/*
+engine_tmp
+engine_tmp/*

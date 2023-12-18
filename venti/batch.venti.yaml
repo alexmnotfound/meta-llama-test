@@ -1,0 +1,20 @@
+# Smoke test to check the engine's running.
+- name: "Meta Llama - Smoke test"
+  category:
+  - "Meta Llama"
+  - smoke
+  - test
+  type: aidata
+  job:
+    template-builtin: aidata_text-url_text-chunk-engine
+    variables:
+      URL: https://vtn-dev-test-files.s3.amazonaws.com/text/txt/fr/spider-silk.txt
+      ENGINE_ID: "00000000-0000-0000-0000-000000000000"
+      PAYLOAD: '{prompt: "Why is monday called monday?"}'
+  checks:
+  - type: result
+    jpath: ".object[0].type"
+    is: text
+  - type: result
+    jpath: ".object[0].text"
+    contains: Testing 1 2 3

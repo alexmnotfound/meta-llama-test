@@ -1,0 +1,6 @@
+# LLama setups
+llamaModel: llama-2-7b.Q5_K_M.gguf
+prompt: ""
+threads: 14
+tokens: 128
+seed: -1
